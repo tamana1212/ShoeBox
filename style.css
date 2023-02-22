@@ -1,0 +1,652 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ••••••••••••••••••••••••••••••••••••••••••••••••••CAROUSAL CODE••••••••••••••••••••••••••• */
+h1,
+h2 {
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.carousel {
+  width: 100%;
+  height: 92vh;
+  position: relative;
+}
+
+.carousel>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide>img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.collection-a {
+  color: #FFFBF5;
+}
+
+.button1:hover a {
+  color: #674188;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: #FFFBF5;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 6px 30px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"]::placeholder {
+  color: #674188;
+}
+
+/*••••••••••••••••••••••••••••••••••••••••••••••••••••••••••Navbar•••••••••••••••••••••••••••••••••••••••*/
+
+.navbarmain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  background-color: #674188;
+}
+
+.navbarleft-item {
+  font-size: 30px;
+}
+
+.navbarleft {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  padding-right: 3rem;
+  color: #FFFBF5;
+}
+
+.navbarcenter {
+  flex: 7;
+}
+
+.navbarright {
+  flex: 3;
+}
+
+.navbarcenter-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.navbarcenter-items {
+  margin-right: 30px;
+}
+
+.navbarright-list {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.navbarright-items {
+  margin-right: 20px;
+}
+
+
+.navbarmain ul li a {
+  color: #FFFBF5;
+}
+
+/* ****************************breaker section******************************* */
+.taglinefirst {
+  background-color: #674188;
+  color: #F7EFE5;
+  margin-top: 0.05rem;
+  margin-bottom: 50px;
+  padding: 80px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.quote1 {
+
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button1 {
+  align-items: center;
+  background-color: #674188;
+  color: #FFFBF5;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: 2px solid #674188;
+  padding: 6px 20px;
+  font-size: 16px;
+}
+
+.button1:hover {
+  background-color: #FFFBF5;
+  color: #674188;
+}
+
+/**********************************************trending products *****************************/
+
+.top-products {
+  padding: 5% 0;
+  text-align: center;
+}
+
+.top-products h2 {
+  color: #674188;
+  padding: 1rem 0;
+}
+
+.product {
+
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  gap: 10px;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 3rem;
+  color: #674188;
+
+}
+
+.product-content {
+  width: 330px;
+  height: 100%;
+}
+
+.product-img {
+  width: 100%;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 1s all ease-in-out;
+}
+
+.product-img:hover {
+  background-size: contain;
+  background-position: center;
+}
+
+.product-img1 {
+  background-image: url("/Photos/jordan.jpg");
+}
+
+.product-img1:hover {
+  background-image: url("/Photos/jordan1.jpg");
+
+}
+
+.product-img2 {
+  background-image: url("/Photos/greennike.jpg");
+}
+
+.product-img2:hover {
+  background-image: url("/Photos/greennike1.jpg");
+}
+
+.product-img3 {
+  background-image: url("/Photos/newbalance.jpg");
+}
+
+.product-img3:hover {
+  background-image: url("/Photos/newbalance1.jpg");
+}
+
+.product-img4 {
+  background-image: url("/Photos/nike.jpg");
+}
+
+.product-img4:hover {
+  background-image: url("/Photos/nike1.jpg");
+}
+
+.product-img5 {
+  background-image: url("/Photos/nikeair.jpg");
+}
+
+.product-img5:hover {
+  background-image: url("/Photos/nikeair1.jpg");
+}
+
+.product-img6 {
+  background-image: url("/Photos/puma.jpg");
+}
+
+.product-img6:hover {
+  background-image: url("/Photos/puma1.jpg");
+}
+
+.product-bottom {
+  height: 6%;
+  width: 100%;
+}
+
+.secondtag {
+  background-color: #674188;
+  color: #F7EFE5;
+  height: 140px;
+}
+
+/******************************************************Categories***********************************/
+.categories {
+  display: flex;
+
+}
+
+.categories img {
+  object-fit: cover;
+  object-position: center;
+  height: 60vh;
+  width: 50%;
+}
+
+.category-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 50%;
+  background-color: #FFFBF5;
+  color: #674188;
+}
+
+.category-right h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+
+}
+
+/**************************collections************************** */
+
+.collections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFBF5;
+  /* flex-direction: row-reverse; */
+  /* padding-bottom: 0.3rem; */
+  /* padding: 5% 0; */
+
+}
+
+.collections-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60vh;
+  background-color: #FFFBF5;
+  color: #674188;
+}
+
+.collections-left p {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.collection-img {
+  width: 50%;
+  height: 60vh;
+  background-image: url("./Photos/col.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-color: #000; */
+}
+
+/* ************************************newsletter****************************************/
+
+.newsletter {
+  /* display: flex; */
+  text-align: center;
+  padding-bottom: 3rem;
+  color: #674188;
+  background-color: #C3ACD0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+}
+
+.newsletter p {
+  margin: 20px auto;
+}
+
+.email {
+  display: inline-flex;
+  justify-content: center;
+  height: 40px;
+
+
+}
+
+.email i {
+  width: 40px;
+  line-height: 40px;
+  background-color: #674188;
+  color: #F7EFE5;
+
+}
+
+.email-box,
+.email-button {
+  border: none;
+  outline: none;
+}
+
+.email-box {
+  width: 0;
+  transition: 0.6s;
+}
+
+.email:hover>.email-box,
+.email-box:focus {
+  width: 260px;
+  padding: 0 10px;
+}
+
+.email-button {
+  background-color: #674188;
+  color: #F7EFE5;
+  font-weight: 500;
+  font-size: medium;
+  text-transform: uppercase;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/* *****************************************************footer*********************************** */
+.footer {
+  padding: 1rem 0;
+  position: relative;
+  /* height: ; */
+  background-color: #C3ACD0;
+  color: #F7EFE5;
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+
+}
+
+ul {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+}
+
+
+.footer-col h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #674188;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.company {
+  padding-right: 15px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #F7EFE5;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #674188;
+}
+
+.footer-col .social-links a:hover {
+  color: #F7EFE5
+}
+
+iframe {
+  height: 250px;
+}
+
+.scroll-up {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+
+
+}
+
+.scroll-up img {
+  width: 50%;
+  margin-top: 5px;
+  margin-left: 12px;
+}
+
+.scroll-up:hover {
+  background-color: rgba(22, 20, 20, 0.2);
+}
+
+/* **********************************Media queries************************************ */
+@media screen and (max-width: 826px) {
+
+  .categories {
+    flex-direction: column-reverse;
+    background-color: #FFFBF5;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .categories img,
+  .collection-img {
+    width: 100%;
+  }
+
+  .collections {
+    flex-direction: column;
+  }
+
+  .category-right,
+  .collections-left {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .footer-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h4 {
+    text-align: center;
+    margin: 20px 0px 15px 0px;
+  }
+
+  .company {
+    padding-right: 0px;
+  }
+
+  .footer-col h4::before {
+    width: 100%;
+  }
+
+  .social-links {
+    margin-bottom: 20px;
+  }
+
+  .email:hover>.email-box,
+  .email-box:focus {
+    width: 190px;
+  }
+
+}
+
+@media screen and (max-width: 621px) {
+  .navbarright-items {
+    display: none;
+  }
+
+  .email:hover>.email-box,
+  .email-box:focus {
+    width: 190px;
+  }
+
+}
+
+@media screen and (max-width:560px) {
+  .navbarleft {
+    margin-left: 20px;
+  }
+
+  .categories img,
+  .collection-img {
+    height: 40vh;
+  }
+
+  .category-right,
+  .collections-left {
+    height: 50vh;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .email:hover>.email-box,
+  .email-box:focus {
+    width: 190px;
+  }
+
+}

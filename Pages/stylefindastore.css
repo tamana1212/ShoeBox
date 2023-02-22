@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input[type="text"] {
+    border: none;
+    background-color: rgb(203, 196, 196);
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: black
+}
+
+
+
+.navbarmain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 11px 13px 11px -10px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 11px 13px 11px -10px rgba(0, 0, 0, 0.55);
+    box-shadow: 11px 13px 11px -10px rgba(0, 0, 0, 0.55);
+
+}
+
+.navbarleft-item {
+    height: 100px;
+    width: 100px;
+}
+
+.navbarleft {
+    flex: 1;
+}
+
+.navbarcenter {
+    flex: 7;
+}
+
+.navbarright {
+    flex: 3;
+}
+
+.navbarcenter-list {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    justify-content: start;
+}
+
+.navbarcenter-items {
+    margin-right: 30px;
+}
+
+.navbarright-list {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    justify-content: end;
+}
+
+.navbarright-items {
+    margin-right: 20px;
+}
+
+.navbarmain ul li a {
+    color: black;
+}
+
+.navbarmain ul li a:hover {
+    color: grey;
+}
